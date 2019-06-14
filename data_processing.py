@@ -1,7 +1,7 @@
 # 读取数据文件，返回list形式的数据,返回定义域
 def data_read():
     with open('kosarak.dat', 'r') as f:
-    # with open('mini.dat', 'r') as f:
+
         userdata = []
         for line in f.readlines():
             # 移除头尾换行符
