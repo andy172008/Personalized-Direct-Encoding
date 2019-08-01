@@ -16,6 +16,8 @@ def data_read():
                 linelist[i] = int(linelist[i])
             userdata.append(linelist)
 
+        # 统计数据中的最大最小值
+        # 根据原始数据的不同，下面的min和max可能要做一些适当修改
         min = 10000
         max = 0
         s = set()
@@ -28,11 +30,11 @@ def data_read():
                 if j < min:
                     min = j
                 s.add(j)
-        print('数据中最小值为%d' % min)
-        print('数据中最大值为%d' % max)
-        print('数据种类共有%d个' % s.__len__())
-        print('共有数据%d个' % num)
-        print('共有用户%d个'%userdata.__len__())
+        # print('数据中最小值为%d' % min)
+        # print('数据中最大值为%d' % max)
+        # print('数据种类共有%d个' % s.__len__())
+        # print('共有数据%d个' % num)
+        # print('共有用户%d个' % userdata.__len__())
     # 将list形式的数据返回，userdata中每个元素都是个list，包含一行的数字
-    # return userdata, s
+    # s为原始数据定义域，转化为列表形式返回
     return userdata, list(s)
